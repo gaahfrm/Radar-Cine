@@ -11,29 +11,29 @@ function Filmes() {
   const [filme, setFilme] = useState({});
   const [loading, setLoading] = useState(true);
 
-  useEffect(() =>
+  useEffect(() => {
     async function loadFilme() {
-      await api.get(`/movie/${id}`, {
-        params: {
-          api_key: "0837eb79fabcecf3642300c7f8dd820f",
-          language: "pt-BR",
-        }
-      })
-        .then((response) => {
-          setFilme(response.data);
-          setLoading(false);
-        })
-        .catch(() => {
-          console.log("FILME NÃO ENCONTRADO");
-          navigate("/", { replace: true });
-          return;
+      try {
+        const response = await api.get(`/movie/${id}`, {
+          params: {
+            api_key: "0837eb79fabcecf3642300c7f8dd820f",
+            language: "pt-BR",
+          }
         });
+        setFilme(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("FILME NÃO ENCONTRADO");
+        navigate("/", { replace: true });
+      }
+    }
 
-      return () => {
-        console.log("COMPONENTE FOI DESMONTADO");
-      };
-    }, [navigate, id]
-  );
+    loadFilme();
+
+    return () => {
+      console.log("COMPONENTE FOI DESMONTADO");
+    };
+  }, [navigate, id]);
 
   function salvarFilmes() {
     const minhaLista = localStorage.getItem("@filmeflix");
@@ -51,38 +51,31 @@ function Filmes() {
     toast.success("Filme salvo com sucesso");
   }
 
-  // Função para salvar a posição de rolagem ao acessar a página de detalhes
   const saveScrollPosition = () => {
     const scrollPosition = window.scrollY;
-    sessionStorage.setItem("scrollPosition", scrollPosition); // Salva a posição de rolagem
+    sessionStorage.setItem("scrollPosition", scrollPosition);
   };
 
-  // Função para restaurar a rolagem ao voltar
   const restoreScrollPosition = () => {
     const savedPosition = sessionStorage.getItem("scrollPosition");
     if (savedPosition) {
-      window.scrollTo(0, savedPosition); // Restaura a posição de rolagem
-      sessionStorage.removeItem("scrollPosition"); // Limpa a posição salva
+      window.scrollTo(0, parseInt(savedPosition, 10));
+      sessionStorage.removeItem("scrollPosition");
     }
   };
 
-  // Ao clicar no botão de voltar
   const handleVoltar = () => {
-    // Restaurando a rolagem ao voltar
     restoreScrollPosition();
 
     if (window.history.length > 2) {
-      navigate(-1); // Volta para a página anterior
+      navigate(-1);
     } else {
-      navigate('/'); // Caso contrário, vai para a página inicial
+      navigate('/');
     }
   };
 
   useEffect(() => {
-    // Salva a posição de rolagem ao acessar a página
     saveScrollPosition();
-
-    // Se a posição de rolagem estiver salva, restaura ao carregar a página
     restoreScrollPosition();
   }, []);
 
@@ -98,7 +91,7 @@ function Filmes() {
     <div className="filme-info">
       <button
         className="botao-voltar"
-        onClick={handleVoltar} 
+        onClick={handleVoltar}
       >
         ⬅ Voltar
       </button>
@@ -107,6 +100,7 @@ function Filmes() {
       <img
         src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`}
         alt={filme.title}
+        loading="lazy"
       />
       <h3>Sinopse</h3>
       <span>{filme.overview}</span>
