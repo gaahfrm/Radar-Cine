@@ -1,0 +1,110 @@
+
+.meus-filmes{
+    margin-top: 24px;
+    display: flex;
+    width: 100vw;
+    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .meus-filmes h1{
+    margin-bottom: 14px;
+    color: white;
+  }
+  
+  .meus-filmes span{
+    font-size: 18px;
+    color: white;
+  }
+  
+  .meus-filmes ul{
+    width: 720px;
+  }
+  
+  .meus-filmes ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  .meus-filmes div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .meus-filmes div a {
+    text-decoration: none;
+    color: #116feb;
+    margin-right: 14px;
+  }
+
+.meus-filmes button{
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 1px 10px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.meus-filmes button:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.meus-filmes button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+
+
+
+  @media (max-width: 750px) {
+
+    .meus-filmes{
+margin-top: 20px;
+padding: 4px;
+
+    }
+
+
+    .meus-filmes ul {
+      display: flex;
+      width: 100vw;
+
+      flex-direction: column;
+      gap: 24px;
+    }
+  
+    .meus-filmes ul li {
+      flex-direction: column;
+      background-color: #252525;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+  
+    .meus-filmes div {
+      justify-content: flex-start;
+      gap: 12px;
+      margin-top: 12px;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-top: 10px;
+      justify-content: center;
+    }
+  
+    .meus-filmes div a {
+      margin-right: 0;
+      padding: 6px 12px;
+      background-color: #e6f0ff;
+      border-radius: 4px;
+    }
+  }

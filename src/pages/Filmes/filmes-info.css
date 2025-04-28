@@ -1,0 +1,98 @@
+.filme-info {
+    margin: 0 auto;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 960px;
+    padding: 0 16px;
+    padding-top: 80px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.filme-info h1 {
+    margin-bottom: 16px;
+    font-size: 2.2rem;
+}
+
+.filme-info img {
+    border-radius: 12px;
+    width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 24px;
+}
+
+.filme-info h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.filme-info span {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.area-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.area-buttons button {
+    font-size: 16px;
+    background-color: #e50914;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.area-buttons button:hover {
+    background-color: #b20710;
+}
+
+.area-buttons a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.botao-voltar {
+    background-color: #202020;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: -100px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-voltar:hover {
+    background-color: #333;
+  }
+
+
+@media (max-width: 900px){
+
+    .filme-info{
+margin-top: 150px;
+padding: 5px;
+    }
+
+    .botao-voltar{
+        margin-bottom: -100px;
+    }
+
+
+
+}

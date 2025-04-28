@@ -1,0 +1,116 @@
+.pagina-acao {
+
+  padding: 20px;
+  text-align: center;
+}
+
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+.lista-acao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-filme {
+  width: 180px;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;  
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; 
+}
+
+.card-filme img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-filme h4 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-filme:hover {
+  transform: scale(1.05);
+}
+
+.card-filme .detalhes {
+  display: none; 
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-filme:hover .detalhes {
+  display: block;
+}
+
+@media (max-width: 786px) {
+
+h1{
+margin-top: 100px;
+
+}
+
+  .titulo{
+    width: 90%;
+    margin-top:50px;
+      }
+      
+  .card-filme {
+    width: 140px;
+    height: 330px;
+  }
+
+  .card-filme h4 {
+    font-size: 1rem;
+  }
+
+  .card-filme .detalhes {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .lista-acao {
+    margin-top: 10px;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .card-filme {
+    flex: 2 2 calc(5% - 8px);
+    min-width: 140px; 
+    max-width: 180px;
+  }
+
+  .card-filme img {
+    height: auto;
+  }
+
+  .card-filme h4 {
+    font-size: 0.9rem;
+  }
+}

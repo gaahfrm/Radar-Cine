@@ -1,0 +1,99 @@
+.pagina-comedia {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.lista-comedia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-filme {
+  width: 180px;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;  
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card-filme img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-filme h4 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-filme:hover {
+  transform: scale(1.05);
+}
+
+.card-filme .detalhes {
+  display: none; 
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-filme:hover .detalhes {
+  display: block;}
+
+@media (max-width: 768px) {
+  .card-filme {
+    width: 140px;
+    height: 330px;
+  }
+
+  .card-filme h4 {
+    font-size: 1rem;
+  }
+
+  .card-filme .detalhes {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .pagina-comedia{
+    margin-top: 10px;
+    color: rgb(172, 172, 172);
+    
+        }
+
+  .card-filme {
+    width: 100px;
+    height: 300px;
+  }
+
+  .card-filme h4 {
+    font-size: 0.9rem;
+  }
+
+  .card-filme .detalhes {
+    font-size: 0.8rem;
+  }
+}
