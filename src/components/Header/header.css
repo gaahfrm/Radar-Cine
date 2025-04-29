@@ -15,7 +15,13 @@ header {
 }
 
 .logo a {
-  font-family:'Bungee Spice', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Bungee Spice', 
+               'Franklin Gothic Medium', 
+               'Arial Narrow', 
+               Arial, 
+               'Helvetica Neue', 
+               Helvetica, 
+               sans-serif;
   font-size: 32px;
   text-decoration: none;
   color: white;
