@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 header {
   position: fixed;
@@ -16,8 +18,7 @@ header {
 }
 
 .logo a {
-  font-family: 'Bungee Spice', 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-
+  font-family: 'Bungee Spice', 'Inter', sans-serif;
   font-size: 32px;
   text-decoration: none;
   color: white;
