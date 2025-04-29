@@ -15,7 +15,7 @@ header {
 }
 
 .logo a {
-  font-family: 'Bungee Spice', cursive;
+  font-family:'Bungee Spice', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 32px;
   text-decoration: none;
   color: white;
@@ -96,7 +96,7 @@ header {
   background-color: #575757;
 }
 
-/* Formulário de pesquisa */
+
 .search-form {
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@ header {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  display: none; /* Inicialmente escondido */
+  display: none; 
 }
 
 .search-toggle-btn:hover {
