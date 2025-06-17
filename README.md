@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 🎬 Radar Cine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **Radar Cine** é uma aplicação web feita em **React.js** que consome a API da TMDB para listar filmes de ação em português, exibindo pôsteres, títulos e detalhes de cada filme.
 
-## Available Scripts
+## 🌐 Link para acessar o projeto online
 
-In the project directory, you can run:
+Veja funcionando no Vercel: [https://radar-cine.vercel.app/](https://radar-cine.vercel.app/)
 
-### `npm start`
+## 🚀 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Listagem de filmes do gênero ação (10 páginas de resultados)
+- Exibição de pôster, título e link para detalhes do filme
+- Carregamento dinâmico e indicação de carregamento
+- Navegação via React Router
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tecnologias usadas
 
-### `npm test`
+- React.js (Hooks: useState, useEffect)
+- React Router DOM
+- Axios (para requisições HTTP)
+- CSS customizado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📂 Estrutura resumida do projeto
 
-### `npm run build`
+src/
+├── components/
+│ └── Acao.jsx
+├── services/
+│ └── api.js
+├── App.js
+└── index.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copiar
+Editar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Como rodar localmente
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone o repositório
 
-### `npm run eject`
+```bash
+git clone https://github.com/seu-usuario/radar-cine.git
+cd radar-cine
+Instale as dependências
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copiar
+Editar
+npm install
+Configure sua chave da API TMDB
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Crie um arquivo .env na raiz com:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ini
+Copiar
+Editar
+REACT_APP_TMDB_KEY=sua_chave_aqui
+Rode a aplicação
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copiar
+Editar
+npm start
+Sobre a API
+O projeto usa a API pública do TMDB para buscar os filmes de ação em português. É necessário criar uma conta e obter a API key gratuita no site oficial.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Autor
+Gabriel Fellipe Rodrigues Machado
